@@ -1,15 +1,15 @@
 void main() {
-  
-  String mensaje = saludar2( nombre: 'Fernando', texto: 'Hola,'  );
-  
+
+  String mensaje = saludar2( nombre: 'Juan', texto: 'Hola,'  );
+
   print(mensaje);
-  
+
 }
 
 
-String saludar({ String texto, String nombre }) {
+String saludar({ required String texto, required String nombre }) {
 //   print('Hola');
   return '$texto $nombre';
 }
 
-String saludar2({ String texto, String nombre }) => '$texto $nombre';
+String saludar2({ required String texto, required String nombre }) => '$texto $nombre';

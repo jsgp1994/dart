@@ -1,37 +1,29 @@
+import 'dart:math' as math;
+
 void main() {
-  
-  final cuadrado = new Cuadrado();
-  
-  cuadrado.lado = 10;
-  
-  
-  print( cuadrado );
-  print( 'área: ${ cuadrado.area }' );
-  
+
+  final cuadrado = new Cuadrado(2);
+
+  //cuadrado.lado = 15;
+  cuadrado.area = 25;
+
+  print(cuadrado.area);
+
 }
 
 
-
 class Cuadrado {
-  
-  double _lado;
-//   double _area;
-  
-  
-  set lado( double valor ) {
-    
-    if ( valor <= 0 ) {
-      throw('El lado no puede ser menor o igual a 0');
-    }
-    
-    _lado = valor;
-    
+
+  double lado;
+
+  Cuadrado(this.lado);
+
+  double get area{
+    return this.lado * this.lado;
   }
-  
-  
-  double get area => _lado * _lado;
-  
-  
-  toString() => 'Lado: $_lado';
-  
+
+  set area( double valor ) {
+    this.lado = math.sqrt(valor);
+  }
+
 }

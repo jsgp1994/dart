@@ -1,15 +1,7 @@
 void main() {
-  
-  /*
-  print('Hola Mundo');
-  asdasd
-  asd
-  a
-  sdasd
-  */
-  
-  String nombre;
+
+  String nombre = 'Juan';
 
   print('Hola $nombre');
-  
+
 }
